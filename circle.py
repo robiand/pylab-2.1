@@ -1,6 +1,6 @@
 from shape import Shape
 
-class circle:
+class Circle(Shape):
     def __init__(self, x: int | float, y: int | float, radius: int | float):
         self.x = x
         self.y = y
