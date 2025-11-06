@@ -1,9 +1,14 @@
+import math
 from shape import Shape
 
 class Circle(Shape):
     def __init__(self, x, y, radius: int | float) -> Shape:
         super().__init__(x, y)
         self.radius = radius
+
+    @property
+    def area(self):
+        return math.pi * self.radius**2
 
     def is_unit(self):
         """Returns if the circle is a unit circle or not, requires radius of 1 and x and y values of 0"""
