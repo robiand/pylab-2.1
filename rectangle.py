@@ -3,6 +3,7 @@ from shape import Shape
 class Rectangle(Shape):
     def __init__(self, x, y, width: int | float, height: int | float):
         super().__init__(x, y)
+        #set values unique to rectangle
         self.width = width
         self.height = height    
 
