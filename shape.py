@@ -8,4 +8,7 @@ class Shape:
         self.y += y
 
     def __repr__(self):
+        return f"(Shape(x={self.x}, y={self.y}))"
+    
+    def __str__(self):
         return f"Shape with coordinates: {self.x}, {self.y}"

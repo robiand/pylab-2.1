@@ -1,15 +1,19 @@
 from shape import Shape
 
 class Rectangle(Shape):
-    def __init__(self, x, y, width: int | float, height: int | float):
+    def __init__(self, x, y, width: int | float, height: int | float) -> Shape:
         super().__init__(x, y)
         #set values unique to rectangle
         self.width = width
         self.height = height    
 
-    def __repr__(self):
-        return f"Rectangle, X-pos: {self.x}, Y-Pos: {self.y}, width: {self.width}, height: {self.height}"  
     
+    def __repr__(self):
+        return f"(Rectangle(x={self.x}, y={self.y}, width={self.width}, height={self.height}"  
+    
+    def __str__(self):
+        return f"Rectangle with X-pos: {self.x}, Y-Pos: {self.y}, width: {self.width}, height: {self.height}"  
+
     def __eq__(self, value): #checks rectangles height and base to see if both rectangles are of equal size
         print(self.width == self.height)
 
