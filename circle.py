@@ -10,6 +10,10 @@ class Circle(Shape):
     def area(self):
         return math.pi * self.radius**2
 
+    @property
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
     def is_unit(self):
         """Returns if the circle is a unit circle or not, requires radius of 1 and x and y values of 0"""
         return self.radius == 1 and self.x == 0 and self.y == 0
@@ -21,7 +25,7 @@ class Circle(Shape):
         return self.radius < value.radius
 
     def __repr__(self):
-        return f"(Circle(x={self.x}, y={self.y}, radius={self.radius}"  
+        return f"(Circle(x={self.x}, y={self.y}, radius={self.radius}, area={self.area}, perimeter={self.perimeter})"  
     
     def __str__(self):
-        return f"Circle, X-pos: {self.x}, Y-Pos: {self.y}, Radius: {self.radius}"
+        return f"Circle, X-pos: {self.x}, Y-Pos: {self.y}, Radius: {self.radius}, Area: {self.area}, Perimeter: {self.perimeter}"

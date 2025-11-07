@@ -11,6 +11,10 @@ class Rectangle(Shape):
     def area(self):
         return self.height * self.width
 
+    @property
+    def perimeter(self):
+        return 2 * (self.height + self.width)
+
     def __repr__(self):
         return f"(Rectangle(x={self.x}, y={self.y}, width={self.width}, height={self.height}, area={self.area})"  
     
