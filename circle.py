@@ -15,14 +15,10 @@ class Circle(Shape):
         return 2 * math.pi * self.radius
 
     def is_unit(self):
+        if not isinstance(self, Circle):
+            raise TypeError(f"Object {self} is not a circle")
         """Returns if the circle is a unit circle or not, requires radius of 1 and x and y values of 0"""
         return self.radius == 1 and self.x == 0 and self.y == 0
-
-    def __eq__(self, value):
-        return super().__eq__(value)
-
-    def __lt__(self, value) -> None:
-        return self.radius < value.radius
 
     def __repr__(self):
         return f"(Circle(x={self.x}, y={self.y}, radius={self.radius}, area={self.area}, perimeter={self.perimeter})"  
